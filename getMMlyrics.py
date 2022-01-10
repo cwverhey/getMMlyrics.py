@@ -327,4 +327,4 @@ if __name__ == '__main__':
 
     #richsyncs = get_mm_richsync(credentials, 40720152, verbose=1)
 
-    short, full = get_mm_lyrics(credentials, artist = 'Oskar Schluster', title = 'Vleurgat', get_richsync = True, verbose = 2)
+    #short, full = get_mm_lyrics(credentials, artist = 'Oskar Schluster', title = 'Vleurgat', get_richsync = True, verbose = 2)
