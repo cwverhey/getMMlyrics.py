@@ -203,7 +203,9 @@ def get_mm_lyrics(creds, title = False, artist = False, album = False, spotify_i
               'crowd_lyrics': bool(track['has_lyrics_crowd']),
               'richsync': bool(track['has_richsync']),
               'subtitles': bool(track['has_subtitles']),
-              'instrumental': bool(track['instrumental'])}
+              'instrumental': bool(track['instrumental']),
+              'match.confidence': full['message']['body']['macro_calls']['matcher.track.get']['message']['header']['confidence']
+              }
 
 
     # filter interesting info from track.lyrics.get
@@ -325,3 +327,4 @@ if __name__ == '__main__':
 
     #richsyncs = get_mm_richsync(credentials, 40720152, verbose=1)
 
+    short, full = get_mm_lyrics(credentials, artist = 'Oskar Schluster', title = 'Vleurgat', get_richsync = True, verbose = 2)
